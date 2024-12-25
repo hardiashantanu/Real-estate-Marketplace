@@ -81,6 +81,7 @@ const PropertyListingPage = () => {
         {properties.map((property) => (
           <Link key={property._id} to={`/property/${property._id}`} className="property-link">
             <div className="property-card">
+              <div className='img-contanier'>
               {property.image && (
                 <img
                   src={`${BASE_URL}/${property.image}`}
@@ -88,9 +89,10 @@ const PropertyListingPage = () => {
                   className="property-image"
                 />
               )}
+              </div>
               <h3 className="property-title">{property.title}</h3>
               <p className="property-description">{property.description}</p>
-              <p className="property-price">Price: ${property.price}</p>
+              <p className="property-price">Price:$ {property.price} </p>
               <p className="property-location">Location: {property.location}</p>
               <p className="property-seller">Seller: {property.seller?.name || 'Anonymous'}</p>
               <p className="property-purchased">

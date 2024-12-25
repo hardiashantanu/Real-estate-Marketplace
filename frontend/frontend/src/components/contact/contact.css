@@ -1,19 +1,29 @@
-.contact form div {
-  display: flex;
+.contact form {
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #a7e4c5, #004f32); /* White to light green to deep green gradient */
+  border-radius: 10px; /* Rounded corners for smoother appearance */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  color: #333; /* Text color for contrast against the gradient */
 }
+
 .contact textarea {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Slightly darker border for visibility */
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px; /* Matches form’s rounded style */
   margin-bottom: 20px;
+  padding: 10px; /* Added padding for better usability */
+  font-size: 1rem; /* Improved readability */
 }
+
 .contact input {
   margin-bottom: 20px;
   margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Consistent border with textarea */
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
 }
-.contact form {
-  padding: 30px;
-}
+
 @media screen and (max-width: 768px) {
   .contact h4 {
     width: 100%;

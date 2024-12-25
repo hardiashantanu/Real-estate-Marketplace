@@ -136,7 +136,7 @@
   background: var(--input-background);
   border: 2px solid var(--primary-green);
   border-radius: 8px;
-  color: var(--text-color);
+  color: black;
   font-size: 1rem;
   font-weight: bold;
   outline: none;
@@ -146,6 +146,7 @@
 .input-field:focus {
   border-color: var(--primary-dark-green);
   background: rgba(255, 255, 255, 0.2);
+  color: black;
 }
 
 .auth-button {

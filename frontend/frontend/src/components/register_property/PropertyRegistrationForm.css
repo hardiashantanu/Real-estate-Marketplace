@@ -1,24 +1,48 @@
-.property-registration {
+/* .property-registration {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2.5rem;
-  background: rgba(0, 64, 51, 0.95);
+  background: rgba(6, 85, 69, 0.95);
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   color: #e5f5e0;
   text-align: center;
+} */
+.property-registration {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #ffffff, #0e8449, #004f32); /* White to light green to deep green */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+  color: #e5f5e0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-registration:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
 }
 
 .property-title {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 3rem; /* Larger size for emphasis */
+  font-weight: 2000; /* Extra bold text */
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #34d399, #059669);
+  background: linear-gradient(90deg, #000000, #059669); /* Gradient text */
   -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
+  -webkit-text-fill-color: transparent; /* Apply gradient to text */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bold shadow for depth */
+  letter-spacing: 2px; /* Spacing for better readability */
+  text-transform: uppercase; /* Capitalize all letters for boldness */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+.property-title:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  text-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
 
 .property-form {
   display: flex;
@@ -27,6 +51,7 @@
 }
 
 .input-group {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,7 +60,7 @@
 
 .input-group label {
   font-weight: 600;
-  color: #a7f3d0;
+  color: rgb(29, 29, 29);
   font-size: 1.1rem;
 }
 
@@ -62,9 +87,17 @@
   resize: vertical;
   min-height: 100px;
 }
+.input-field::placeholder {
+  color: #888; /* Change to your desired color */
+  font-style: italic; /* Optional, adds a stylish look */
+  font-size: 1rem; /* Adjust size if needed */
+  opacity: 0.8; /* Adjust visibility */
+}
+
 
 .submit-button {
   padding: 0.85rem 1.75rem;
+  margin-bottom: 20px;
   background: linear-gradient(90deg, #10b981, #22c55e);
   color: #ffffff;
   border: none;

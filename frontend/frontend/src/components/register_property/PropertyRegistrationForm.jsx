@@ -68,6 +68,7 @@ const PropertyRegistrationForm = () => {
             type="text"
             id="title"
             name="title"
+            placeholder='The title for your property'
             value={property.title}
             onChange={handleChange}
             required
@@ -79,6 +80,7 @@ const PropertyRegistrationForm = () => {
           <textarea
             id="description"
             name="description"
+            placeholder='Description for your property'
             value={property.description}
             onChange={handleChange}
             required
@@ -91,6 +93,7 @@ const PropertyRegistrationForm = () => {
             type="number"
             id="price"
             name="price"
+            placeholder='50000'
             value={property.price}
             onChange={handleChange}
             required
@@ -102,6 +105,7 @@ const PropertyRegistrationForm = () => {
           <input
             type="text"
             id="location"
+            placeholder='Location of the property'
             name="location"
             value={property.location}
             onChange={handleChange}

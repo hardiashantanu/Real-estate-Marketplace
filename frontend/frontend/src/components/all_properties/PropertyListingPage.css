@@ -1,62 +1,62 @@
 .property-listing {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.listing-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  padding: 0; /* Remove padding for full width */
+  max-width: 100%; /* Allow the container to span the entire width */
+  margin: 0 auto; /* Center alignment */
 }
 
 .properties-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-}
-
-.property-link {
-  text-decoration: none;
-  color: inherit;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive masonry columns */
+  grid-gap: 24px; /* Adjust the gap between grid items */
+  grid-auto-rows: 1fr; /* Maintain row heights */
+  justify-items: center; /* Center items in grid cells */
+  margin-top: 20px;
 }
 
 .property-card {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 16px;
+  padding: 24px; /* Increased padding for a larger look */
   background-color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.6s, box-shadow 0.3s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Flexbox for easy item positioning */
 }
 
 .property-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05); /* Slightly larger scale effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+  width: 100%; /* The image container will take the full width of the card */
+  height: 250px; /* Define a fixed height for uniformity */
+  overflow: hidden; /* Ensures no overflow */
+  border-radius: 8px; /* Optional: matches the styling of the card */
 }
 
 .property-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  height: 100%; /* Makes the image fill the height of the container */
+  object-fit: cover; /* Maintains aspect ratio while filling the container */
+  border-radius: 8px; /* Matches the container's border-radius for a cohesive look */
 }
 
 .property-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem; /* Slightly larger title */
+  margin-bottom: 12px;
   color: #2d3748;
   font-weight: 600;
 }
 
 .property-description {
-  font-size: 1rem;
-  margin-bottom: 16px;
+  font-size: 1.1rem; /* Slightly larger description */
+  margin-bottom: 20px;
   color: #555;
-  line-height: 1.6;
-  max-height: 60px;
+  line-height: 1.8;
+  max-height: 80px; /* Adjust for larger cards */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -64,12 +64,19 @@
 .property-price,
 .property-location,
 .property-seller {
-  font-size: 0.9rem;
+  font-size: 1rem; /* Larger text for details */
   color: #4a5568;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .property-seller {
   font-style: italic;
   color: #718096;
+}
+
+.property-purchased {
+  font-size: 1rem;
+  color: #e53e3e; /* Red color for purchase status */
+  margin-top: auto; /* Pushes the purchase status to the bottom of the card */
+  font-weight: bold;
 }

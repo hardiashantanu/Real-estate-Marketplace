@@ -130,9 +130,16 @@ const Header = () => {
     <>
       <header>
         <div className="container flex">
-          <div className="logo">
+          {/* <div className="logo">
             <img src="./images/logo.png" alt="Logo" />
-          </div>
+          </div> */}
+          <div
+      className="logo"
+      onClick={() => navigate("/")}
+      style={{ cursor: "pointer" }} // Adds a pointer cursor for better UX
+    >
+      <img src="./images/logo.png" alt="Logo" />
+    </div>
           <div className="nav">
             <ul className={navList ? "small" : "flex"}>
               {/* If admin is logged in, show only "Verify Properties" and "All Properties" */}

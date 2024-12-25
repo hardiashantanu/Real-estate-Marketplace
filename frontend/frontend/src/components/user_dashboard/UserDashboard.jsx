@@ -44,7 +44,7 @@ const UserDashboard = () => {
       <div className="user-details">
         <h2>Welcome, {user.name}</h2>
         <p>Email: {user.email}</p>
-        <p>Joined: {new Date(user.createdAt).toLocaleDateString()}</p>
+        {/* <p>Joined: {new Date(user.createdAt).toLocaleDateString()}</p> */}
       </div>
 
       {/* Listed Properties Section */}
